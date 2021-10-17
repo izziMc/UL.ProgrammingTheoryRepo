@@ -31,11 +31,12 @@ public class DoggoController : MonoBehaviour
         }
         else
         {
+            moveDir = new Vector3(0, 0, 0);
             waitTimer -= Time.deltaTime;
             if (waitTimer <= 0)
             {
                 stateTimer = stateDuration;
-                moveDir = new Vector3(Random.Range(-1, 1), 0, Random.Range(-1, 1));
+                moveDir = new Vector3(Random.Range(-1, 2), 0, Random.Range(-1, 2));
             }
         }
     }
